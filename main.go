@@ -37,10 +37,10 @@ func (b Bitcoin) Pay(amount float64) error {
 	return fmt.Errorf("no wallet selected")
 }
 
-type Stripe struct{}
+type Bank struct{}
 
-func (s Stripe) Pay(amount float64) error {
-	fmt.Printf("Paid %.2f using Bitcoin\n", amount)
+func (s Bank) Pay(amount float64) error {
+	fmt.Printf("Paid %.2f using Bank\n", amount)
 	return fmt.Errorf("no wallet selected")
 }
 
