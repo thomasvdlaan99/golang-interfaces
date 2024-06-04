@@ -1,0 +1,12 @@
+git init
+git clone <link>
+git add <filepath>
+git commit -m "message"
+git status
+git pull
+git branch 
+git checkout <branchname>
+git merge <branchname>
+git log
+git diff
+git branch -d <branchname>
