@@ -7,3 +7,5 @@ git pull
 git branch 
 git checkout <branchname>
 git merge <branchname>
+git log
+git diff
