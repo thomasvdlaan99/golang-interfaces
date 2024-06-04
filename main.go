@@ -37,6 +37,13 @@ func (b Bitcoin) Pay(amount float64) error {
 	return fmt.Errorf("no wallet selected")
 }
 
+type Stripe struct{}
+
+func (s Stripe) Pay(amount float64) error {
+	fmt.Printf("Paid %.2f using Bitcoin\n", amount)
+	return fmt.Errorf("no wallet selected")
+}
+
 // main function
 func main() {
 	// Use CreditCard as our payment method
