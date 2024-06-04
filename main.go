@@ -42,7 +42,7 @@ func main() {
 	// Use CreditCard as our payment method
 	paymentMethod := CreditCard{}
 
-	err := paymentMethod.Pay(400.20)
+	err := paymentMethod.Pay(300.20)
 	if err != nil {
 		log.Fatalf("Error: %s", err)
 	}
