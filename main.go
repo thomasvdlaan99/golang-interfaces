@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"log"
+	"test/pre"
 )
 
 // PaymentMethod is the interface
@@ -46,6 +47,7 @@ func (s Bank) Pay(amount float64) error {
 
 // main function
 func main() {
+	pre.Preallo()
 	// Use CreditCard as our payment method
 	paymentMethod := CreditCard{}
 
