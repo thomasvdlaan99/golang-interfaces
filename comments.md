@@ -1,4 +1,4 @@
-Please fill here the notes in from te video
+***Comments***
 
 -pre allocation is making the code run much quicker
 
