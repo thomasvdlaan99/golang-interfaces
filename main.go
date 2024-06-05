@@ -48,7 +48,7 @@ func (s Bank) Pay(amount float64) error {
 func main() {
 	// learning.Preallo()
 	// learning.Runes()
-	learning.Goroutine()
+	learning.Generics()
 	// Use CreditCard as our payment method
 	// paymentMethod := CreditCard{}
 
