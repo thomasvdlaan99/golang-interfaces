@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-var mx = sync.Mutex{}
+var mx = sync.RWMutex{}
 var wg = sync.WaitGroup{}
 var dbData = []string{"id1", "id2", "id3", "id4", "id5"}
 var results = []string{}
@@ -25,9 +25,20 @@ func Goroutine() {
 func dbCall(i int) {
 	var delay float32 = 2000
 	time.Sleep(time.Duration(delay) * time.Millisecond)
-	fmt.Println("The result from the database is: ", dbData[i])
-	mx.Lock()
-	results = append(results, dbData[i])
-	mx.Unlock()
+	fmt.Println("\nThe result from the database is: ", dbData[i])
+	save(dbData[i])
+	log()
 	wg.Done()
+}
+
+func save(result string) {
+	mx.Lock()
+	results = append(results, result)
+	mx.Unlock()
+}
+
+func log() {
+	mx.RLock()
+	fmt.Printf("\nthe current results are%v", results)
+	mx.RUnlock()
 }
