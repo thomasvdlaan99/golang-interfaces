@@ -2,8 +2,7 @@ package main
 
 import (
 	"fmt"
-	"log"
-	"test/pre"
+	"test/learning"
 )
 
 // PaymentMethod is the interface
@@ -47,12 +46,14 @@ func (s Bank) Pay(amount float64) error {
 
 // main function
 func main() {
-	pre.Preallo()
+	// learning.Preallo()
+	// learning.Runes()
+	learning.Goroutine()
 	// Use CreditCard as our payment method
-	paymentMethod := CreditCard{}
+	// paymentMethod := CreditCard{}
 
-	err := paymentMethod.Pay(300.20)
-	if err != nil {
-		log.Fatalf("Error: %s", err)
-	}
+	// err := paymentMethod.Pay(300.20)
+	// if err != nil {
+	// 	log.Fatalf("Error: %s", err)
+	// }
 }

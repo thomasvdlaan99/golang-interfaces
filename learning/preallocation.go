@@ -1,4 +1,4 @@
-package pre
+package learning
 
 import (
 	"fmt"
